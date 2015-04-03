@@ -1,0 +1,100 @@
+body {
+    background: #e3e3e3 url('../img/crossword.png') repeat;;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+h1, h2, h3, p, code, ul, ol {
+    text-shadow: 0 1px 0 rgba(255,255,255,1);
+}
+
+h1 {
+    font-size: 56px;
+    margin: 10px 0 0;
+}
+
+h2 {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding-bottom: 5px;
+    margin: 40px 0;
+}
+
+a {
+    color: #ed3314;
+    text-decoration: none;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    width: 860px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+code {
+    display: block;
+    background: rgba(0,0,0,0.05);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+/* tiltShift stuff (start) */
+.frame {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin: 0 40px 40px 0;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5), 0px 2px 15px 0px rgba(0, 0, 0, 0.3);
+    border: 5px solid white;
+}
+
+.frame:nth-child(2n) {
+    margin-right: 0;
+}
+
+.tiltshift-layer {
+    -webkit-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.frame:hover .tiltshift-layer {
+    opacity: 0;
+}
+
+.tiltshift-wrap {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.tiltshift-layer {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+/* tiltShift stuff (end)*/

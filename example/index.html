@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>TiltShift.js - Tilt-Shift effect with VanillaJS and CSS3</title>
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="container cf">
+        <h1 class="text-center">tiltShift.js</h1>
+        <p>A VanillaJS plugin that uses the CSS3 image filters to replicate the tilt-shift effect. This is a proof of concept and currently <strong>only works in Webkit based browsers</strong> (Chrome, Safari, Opera).</p>
+        <p>This script is based on the original created by Noel Tock and Adam Yanalunas: <a href="http://www.noeltock.com/tilt-shift-css3-jquery-plugin/" title="TiltShift.js with jQuery">http://www.noeltock.com/tilt-shift-css3-jquery-plugin/</a></p>
+    </header>
+
+    <div class="container cf">
+        <div class="frame">
+            <img src="img/example2.jpg" class="tiltshift" data-position="55" data-blur="2" data-focus="15" data-falloff="10" data-direction="y" alt="">
+        </div>
+
+        <div class="frame">
+            <img src="img/example1.jpg" class="tiltshift" data-position="70" data-blur="1" data-focus="10" data-falloff="20" data-direction="y" alt="">
+        </div>
+
+        <div class="frame">
+            <img src="img/example3.jpg" class="tiltshift" data-position="50" data-blur="2" data-focus="10" data-falloff="10" data-direction="y" alt="">
+        </div>
+
+        <div class="frame">
+            <img src="img/example4.jpg" class="tiltshift" data-position="50" data-blur="2" data-focus="4" data-falloff="6" data-direction="x" alt="">
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Download</h2>
+        <p>Download <a href="https://github.com/pinceladasdaweb/TiltShift.js/zipball/master" rel="nofollow">here</a> or go to <a href="https://github.com/pinceladasdaweb/TiltShift.js">github</a>. Released under <a href="http://opensource.org/licenses/MIT" rel="nofollow">MIT License</a></p>
+
+        <h2>How to use</h2>
+
+        <p>Call the plugin on any collection of images you want by adding the following script:</p>
+
+        <code>
+            &lt;script src="path/to/tiltshift.min.js">&lt;/script><br>
+            &lt;script>TiltShift.init();&lt;/script>
+        </code>
+
+        <p>Parameters on each image must be set using the HTML5 data attributes, like this:</p>
+
+        <code>
+            &lt;img src="url" class="tiltshift" data-position="50" data-blur="2" data-focus="10" data-falloff="10" data-direction="y">
+        </code>
+
+        <p>The attributes will control various variables that influence the tiltshift effect.</p>
+
+        <ul>
+            <li><strong>position</strong> (0-100), defines the point of focus. 66 would be two thirds of the way in.</li>
+            <li><strong>blur</strong> (0-?), the blur radius in pixels. 1 or 2 are usually good numbers.</li>
+            <li><strong>focus</strong> (0-100), the amount of area that is in focus. 10 would mean one tenth of the image is sharp.</li>
+            <li><strong>falloff</strong> (0-100), the amount of area between complete focus and complete blur. The lower the value, the “tighter” the fade.</li>
+            <li><strong>direction</strong> (“x”, “y”, or 0-360), the direction of the effect with zero at right.</li>
+        </ul>
+
+        <h2>Notes</h2>
+
+        <ul>
+            <li>As previously stated, currently only supported by Webkit based browsers (Chrome, Safari, Opera). CSS3 filters are not widely supported, and Firefox/Mozilla to my knowledge only support SVG's for it's mask property.</li>
+            <li>Wraps a DIV around the IMG tag, so you may want to apply to same styling attributes to the selector '.tiltshift-wrap'.</li>
+            <li>Pull requests? Yes, happy to make this more rigid across different browsers.</li>
+        </ul>
+
+        <h2>Photo credits</h2>
+
+        <p>If you're interested in licensing any of the images, please contact the photographers by following the links below:</p>
+
+        <a href="http://www.flickr.com/photos/stevec77/2841222052/in/photostream" rel="nofollow" target="_blank">Airplane</a> /
+        <a href="http://www.flickr.com/photos/seattlemunicipalarchives/3836684671/" rel="nofollow" target="_blank">Stadium</a> /
+        <a href="http://www.flickr.com/photos/nattu/2691652187/" rel="nofollow" target="_blank">Ocean</a> /
+        <a href="http://www.flickr.com/photos/hyunlab/309527428/" rel="nofollow" target="_blank">Skyscraper</a>
+    </div>
+
+    <script src="../build/tiltshift.min.js"></script>
+    <script>TiltShift.init();</script>
+</body>
+</html>
