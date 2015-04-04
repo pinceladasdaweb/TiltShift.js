@@ -11,6 +11,14 @@ Call the plugin on any collection of images you want by adding the following scr
 <script>TiltShift.init();</script>
 ```
 
+The images that should be applied and purposes, should follow the following sample HTML markup:
+
+```html
+<div class="frame">
+    <img src="url" class="tiltshift" data-position="50" data-blur="2" data-focus="10" data-falloff="10" data-direction="y">
+</div>
+```
+
 Parameters on each image must be set using the HTML5 data attributes, like this:
 
 ```html
@@ -24,6 +32,42 @@ The attributes will control various variables that influence the tiltshift effec
 - **focus** (0-100), the amount of area that is in focus. 10 would mean one tenth of the image is sharp.
 - **falloff** (0-100), the amount of area between complete focus and complete blur. The lower the value, the “tighter” the fade.
 - **direction** (“x”, “y”, or 0-360), the direction of the effect with zero at right.
+
+Put the CSS in the head section of your HTML document:
+
+```css
+.frame {
+    position: relative;
+}
+
+.tiltshift-layer {
+    -webkit-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.frame:hover .tiltshift-layer {
+    opacity: 0;
+}
+
+.tiltshift-wrap {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.tiltshift-layer {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+```
 
 ## Notes
 
