@@ -37,7 +37,7 @@ Check [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## History
 
-Check [Releases](https://github.com/pinceladasdaweb//releases) for detailed changelog.
+Check [Releases](https://github.com/pinceladasdaweb/TiltShift.js/releases) for detailed changelog.
 
 ## License
 
