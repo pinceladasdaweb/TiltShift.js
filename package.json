@@ -1,7 +1,7 @@
 {
     "name": "tiltshift",
     "description": "Tilt-Shift effect with VanillaJS and CSS3",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "private": true,
     "author": "Pedro Rogério",
     "scripts": {
