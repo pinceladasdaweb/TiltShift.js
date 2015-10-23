@@ -8,7 +8,7 @@ Call the plugin on any collection of images you want by adding the following scr
 
 ```html
 <script src="path/to/tiltshift.min.js"></script>
-<script>TiltShift.init();</script>
+<script>new TiltShift();</script>
 ```
 
 The images that should be applied and purposes, should follow the following sample HTML markup:
