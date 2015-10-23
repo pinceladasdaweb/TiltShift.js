@@ -22,10 +22,6 @@
         this.run();
     };
 
-    TiltShift.init = function () {
-        return new TiltShift();
-    };
-
     TiltShift.prototype = {
         run: function () {
             Array.prototype.forEach.call(this.frames, function (frame) {
